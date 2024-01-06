@@ -76,6 +76,6 @@ jobs:
           git diff --exit-code || git commit -m 'Done  by Github Actions   Job changemanifest: ${{ github.run_number }}'
           git push origin main
         env:
-          username: ${{ secrets.GIT_USERNAME }}
-          password: ${{ secrets.GIT_PASSWORD }}
+          GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+          GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
           RUN_NUMBER: ${{ github.run_number }}

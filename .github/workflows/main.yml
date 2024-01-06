@@ -73,6 +73,8 @@ jobs:
           sed -i "s+himangshu12/cicd.*+himangshu12/cicd:app-$RUN_NUMBER+g" deployment.yaml
           cat deployment.yaml
           git add .
+          git config --global user.name himangshu12345
+          git config --global user.email himanb43@gmail.com
           git commit -m 'Done  by Github Actions   Job changemanifest: ${{ github.run_number }}'
           git push origin main
         env:
